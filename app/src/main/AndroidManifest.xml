@@ -13,11 +13,16 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- CAMBIAR EL ICONO PREDETERMINADO PARA LAS NOTIFICACIONES ENTRANTES -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification_icon" />
+
+        <!-- DECLARACION DEL SERVICIO QUE CACHA MENSAGES FIREBASE-->
         <service
             android:name=".MyFirebaseMessagingService"
             android:exported="false"
